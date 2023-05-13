@@ -1,7 +1,11 @@
 import * as mod from "https://deno.land/x/deno_dom@v0.1.38/deno-dom-wasm.ts";
 
+const defaultUrl = '';
+
 async function parseHTML(url) {
-  const response = await fetch(url);
+  const pageUrl = url || defaultUrl;
+
+  const response = await fetch(pageUrl);
   const html = await response.text();
   
   const doc = new DOMParser().parseFromString(html, "text/html");
