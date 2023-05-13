@@ -1,4 +1,4 @@
-import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.js";
+import * as mod from "https://deno.land/x/deno_dom@v0.1.38/deno-dom-wasm.ts";
 
 async function parseHTML(url) {
   const response = await fetch(url);
