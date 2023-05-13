@@ -1,4 +1,4 @@
-import * as mod from "https://deno.land/x/deno_dom@v0.1.38/deno-dom-wasm.ts";
+import { DOMParser } from "https://deno.land/x/deno_dom@v0.1.38/deno-dom-wasm.ts";
 
 async function parseHTML(url = 'https://en.wikipedia.org/wiki/List_of_Dragons%27_Den_(British_TV_programme)_offers_Series_1-10') {
   const response = await fetch(url);
